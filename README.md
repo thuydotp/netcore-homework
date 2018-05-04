@@ -1,1 +1,0 @@
-# netcore-homework

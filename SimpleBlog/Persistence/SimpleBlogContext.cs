@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SimpleBlog.Models.BlogViewModels;
 
 namespace SimpleBlog.Persistence
 {
@@ -10,5 +11,7 @@ namespace SimpleBlog.Persistence
         }
 
         public DbSet<Category> Category { get; set; }
+
+        public DbSet<SimpleBlog.Models.BlogViewModels.CategoryViewModel> CategoryViewModel { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SimpleBlog.Persistence;
+using AutoMapper;
 
 namespace SimpleBlog
 {
@@ -19,6 +20,7 @@ namespace SimpleBlog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper();
             services.AddMvc();
 
             services.AddDbContext<SimpleBlogContext>(options =>
